@@ -1,0 +1,152 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+        height: 100%;
+      }
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+.first-cell{
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Open Sans", Verdana;
+      }
+      
+      
+.heading_form{
+        font-size: 32px;
+        font-weight: bold;
+        color:#741000;
+        font-family: "Open Sans", Verdana;
+      }   
+ .heading_form2{
+        font-size: 18px;
+        font-weight: bold;
+        color:#741000;
+        font-family: "Open Sans", Verdana;
+      } 
+.head_list_places{
+        font-size: 18px;
+        font-family: "Open Sans", Verdana;
+        font-weight: bold;
+      }
+.head_num_places{
+        font-size: 40px;
+        font-family: "Open Sans", Verdana;
+        font-weight: bold;
+      }
+.txt-input{
+        font-size: 13px;
+        font-family: "Open Sans", Verdana;  
+      }
+/* DivTable*/
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTable2{
+	display: table;
+        table-layout: fixed;
+        width: 500px;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableRow2 {
+	display: table-row;
+        width: 500px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 0px;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableCell2 {
+	border: 0px;
+	display: table-cell;
+	padding: 3px 10px;
+        font-size: 13px;
+        font-family: "Open Sans", Verdana;
+        max-width: 300px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+.divTableColspan,
+.divTableColspan+.divTableCell2 {
+  border: 0;
+}
+
+.divTableColspan>div {
+  width: 1px;
+}
+
+.divTableColspan>div>div {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+/* Buttons */
+.button2 {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 150px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #002e59;
+  color: #002e59;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.button2:hover {
+  color: white;
+  background: #00cdd0;
+}
+.button2:active {
+  letter-spacing: 2px;
+}
+.btn-class {
+  outline: none;
+  height: 30px;
+  text-align: center;
+  width: 100px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #002e59;
+  color: #002e59;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+ }
+.btn-class:hover {
+  color: white;
+  background: #00cdd0;
+}
+.btn-class:active {
+  letter-spacing: 2px;
+}

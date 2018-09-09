@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Selection of locations for Help Centers</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      /* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+    </style>
+  <script type="text/javascript" language="javascript" src="js/ajax.js"></script>  
+  <script type="text/javascript" language="javascript" src="js/cart.js"></script>
+  </head>
+  <body>
+    <div class="divTable">
+    <div class="divTableBody">
+    <div class="divTableRow" style="height:90px; width:100%;">
+    Banner 
+    </div>
+    
+    <div class="divTableRow">
+    <div class="divTableCell" id="map" style="height:500px; width:75%;">
+<script>
+
+            // This example displays a marker at the center of Australia.
+            // When the user clicks the marker, an info window opens.
+            var markers = [];
+
+            function initMap() {
+                var victoriaSquare = {lat: -34.9275884, lng: 138.6002936};
+
+                var data = [{name: "Adelaide City Library", coord: {lat: -34.923188, lng: 138.602438}, internet: "Yes", desks: 500, computers: "Yes"},
+                    {name: "Magdalene Center", coord: {lat: -34.9329961, lng: 138.5909818}, internet: "No", desks: 20, computers: "Yes"},
+                    {name: "ASWCC", coord: {lat: -34.9334759, lng: 138.5900579}, internet: "Yes", desks: 30, computers: "Yes"},
+                    {name: "Box Factory Community Centre", coord: {lat: -34.931813, lng: 138.608437}, internet: "Yes", desks: 50, computers: "No"},
+                    {name: "Mission Australia - E&T", coord: {lat: -34.93303652, lng: 138.6026246}, internet: "Yes", desks: 200, computers: "Yes"},
+                    {name: "Magistrates Court of SA", coord: {lat: -34.92767106, lng: 138.5990277}, internet: "Yes", desks: 70, computers: "Yes"},
+                    {name: "Working Women's Centre Inc", coord: {lat: -34.90004932, lng: 138.5684497}, internet: "Yes", desks: 50, computers: "Yes"},
+                    {name: "Neighborhood Watch Volunteers Assoc SA Inc", coord: {lat: -34.92663084, lng: 138.6018865}, internet: "Yes", desks: 30, computers: "Yes"},
+                    {name: "Premier Stateliner Coach Group", coord: {lat: -34.92715645, lng: 138.5959393}, internet: "No", desks: 15, computers: "Yes"},
+                    {name: "RiAus", coord: {lat: -34.92512519, lng: 138.600768}, internet: "Yes", desks: 75, computers: "Yes"}];
+
+
+                // Declare map
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 14,
+                    center: victoriaSquare
+                });
+
+
+                for (i = 0; i < data.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: data[i]["coord"],
+                        map: map,
+                        title: data[i]["name"],
+                        status: "unclicked"
+                    });
+                    hoverMessage(marker, markerMessage(data[i])); // Assigning Hover to each Marker
+                    addClick(marker, data[i]); // Assign Click listener
+                }
+            }
+            ;
+            
+            /*
+             * Attach Hover Listener and the Message
+             */
+            function hoverMessage(amarker, message) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: message
+                });
+                amarker.addListener('mouseover', function () {
+                    infowindow.open(amarker.get('map'), amarker);
+                });
+                amarker.addListener('mouseout', function () {
+                    infowindow.close();
+                });
+            }
+            
+            function addClick(amarker, adata){
+                amarker.addListener('click', function(){
+                   if(amarker["status"] === "unclicked"){
+                       var node = document.createElement("p");
+                       var textnode = document.createTextNode(adata["name"]);
+                       node.appendChild(textnode);
+                       document.getElementById("lists").appendChild(node);
+                       amarker["status"] = "clicked";
+                   } else {
+                   }
+                });
+            }
+
+
+            /*
+             * Content of Hover Window
+             */
+            function markerMessage(adata) {
+                var name = adata["name"];
+                var contentString =
+                        '<div id="content">' +
+                        '<div id="siteNotice">' +
+                        '</div>' +
+                        '<h1 id="firstHeading" class="firstHeading">' + adata["name"] + '</h1>' +
+                        '<div id="bodyContent">' +
+                        '<p style="font-size:20px">Internet Availability: ' + adata["internet"] + ' </p>' +
+                        '<p style="font-size:20px">Number of Desks: ' + adata["desks"] + '</p>' +
+                        '<p style="font-size:20px">Computers: ' + adata["computers"] + '</p>' +
+                        '</div>' +
+                        '</div>';
+                return contentString;
+            }
+        </script>
+    </div>
+<div class="divTableCell">
+    <div id="test">
+        </div>
+</div>
+
+</div>
+<div class="divTableRow">
+    <div class="divTableCell">
+    </div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+</div>
+</div>
+<!-- DivTable.com -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh53Rk1CiyMEzeGEmPNbold-BcVLR0H3A&callback=initMap">
+    </script>
+  </body>
+</html>

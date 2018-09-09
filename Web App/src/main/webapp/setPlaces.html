@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Available places in the city</title>
+        <link rel="stylesheet" href="css/styleGovHack.css">
+    </head>
+    <body>
+        <div class="divTable">
+
+            <div class="divTableBody">
+                <div class="divTableRow" style="height:90px; width:100%;">
+                    <img src="img/bannerTaxMate.jpg">
+                </div>
+                <div class="heading_form">Help Center Setup</div><hr><br>
+                <div class="first-cell">Available Suggested Community spaces for ATO Help Centers<br>
+                    Kindly select a community space to set a ATO Help Center<br>
+                </div><br>
+                <div class="divTableRow">
+                    <!-- Cell that contains the map-->
+                    <div class="divTableCell" id="map" style="height:500px; width:75%;">
+                    </div>
+                    <!-- Cell that contains the table with the list of selected centers-->
+                    <div class="divTableCell">
+                        <div id="test">
+                            <table id="facility-table">
+                                <tr>
+                                <td class="head_list_places" width="80%">
+                                    NUMBER OF REQUIRED PLACES
+                                </td>
+                                <!-- The number of required places comes from the analysis of historical data -->
+                                <!-- For production environment that information comes from a database -->
+                                <td class="head_num_places" align="center">
+                                    3
+                                </td>
+                                </tr> 
+                                <tr height="10"></tr>
+                                <tr>
+                                <td class="head_list_places">
+                                    LIST OF SELECTED PLACES
+                                </td>
+                                </tr> 
+                                <tr height="10"></tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div align="center">
+                        <button id="btn-submit" class="button2">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">
+                    </div>
+                    <div class="divTableCell">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            // This example displays a marker at the center of Australia.
+            // When the user clicks the marker, an info window opens.
+            var markers = [];
+
+            function initMap() {
+                var victoriaSquare = {lat: -34.9275884, lng: 138.6002936};
+
+                var data = [{name: "Adelaide City Library", coord: {lat: -34.923188, lng: 138.602438}, internet: "Yes", desks: 500, computers: "Yes"},
+                    {name: "Magdalene Center", coord: {lat: -34.9329961, lng: 138.5909818}, internet: "No", desks: 20, computers: "Yes"},
+                    {name: "Adelaide South West Community Centre", coord: {lat: -34.9334759, lng: 138.5900579}, internet: "Yes", desks: 30, computers: "Yes"},
+                    {name: "Box Factory Community Centre", coord: {lat: -34.931813, lng: 138.608437}, internet: "Yes", desks: 50, computers: "No"},
+                    {name: "Mission Australia - E&T", coord: {lat: -34.93303652, lng: 138.6026246}, internet: "Yes", desks: 200, computers: "Yes"},
+                    {name: "Magistrates Court of SA", coord: {lat: -34.92767106, lng: 138.5990277}, internet: "Yes", desks: 70, computers: "Yes"},
+                    {name: "Working Women's Centre Inc", coord: {lat: -34.90004932, lng: 138.5684497}, internet: "Yes", desks: 50, computers: "Yes"},
+                    {name: "Neighborhood Watch Volunteers Assoc SA Inc", coord: {lat: -34.92663084, lng: 138.6018865}, internet: "Yes", desks: 30, computers: "Yes"},
+                    {name: "Premier Stateliner Coach Group", coord: {lat: -34.92715645, lng: 138.5959393}, internet: "No", desks: 15, computers: "Yes"},
+                    {name: "Royal Institution of Australia", coord: {lat: -34.92512519, lng: 138.600768}, internet: "Yes", desks: 75, computers: "Yes"}];
+
+
+                // Declare map
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 14,
+                    center: victoriaSquare
+                });
+
+
+                for (i = 0; i < data.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: data[i]["coord"],
+                        map: map,
+                        title: data[i]["name"],
+                        status: "unclicked",
+                        icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                    });
+                    hoverMessage(marker, markerMessage(data[i])); // Assigning Hover to each Marker
+                    addClick(marker, data[i]); // Assign Click listener
+                }
+            }
+            ;
+
+            /*
+             * Attach Hover Listener and the Message
+             */
+            function hoverMessage(amarker, message) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: message
+                });
+                amarker.addListener('mouseover', function () {
+                    infowindow.open(amarker.get('map'), amarker);
+                });
+                amarker.addListener('mouseout', function () {
+                    infowindow.close();
+                });
+            }
+
+            function addClick(amarker, adata) {
+                amarker.addListener('click', function () {
+                    if (amarker["status"] === "unclicked") {
+                        var tr = document.createElement("tr");
+                        var firstCell = document.createElement("td");
+                        firstCell.setAttribute("class", "first-cell");
+                        var firstTextNode = document.createTextNode(adata["name"]);
+                        firstCell.appendChild(firstTextNode);
+                        tr.appendChild(firstCell);
+                        console.log(tr);
+                        //tr.appendChild(firstCell.appendChild(firstTextNode));
+                        var secCell = document.createElement("td");
+                        var secTextNode = document.createElement("Button");
+                        secTextNode.setAttribute("class", "btn-class");
+                        secTextNode.innerHTML = "Remove";
+                        secCell.appendChild(secTextNode);
+                        tr.appendChild(secCell);
+
+                        document.getElementById("facility-table").appendChild(tr);
+                        amarker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+
+                        amarker["status"] = "clicked";
+                    } else {
+                    }
+                });
+            }
+
+
+            /*
+             * Content of Hover Window
+             */
+            function markerMessage(adata) {
+                var name = adata["name"];
+                var contentString =
+                        '<div id="content">' +
+                        '<div id="siteNotice">' +
+                        '</div>' +
+                        '<p id="firstHeading" class="first-cell">' + adata["name"] + '</p>' +
+                        '<div id="bodyContent">' +
+                        '<p style="font-size:11px">Internet Availability: ' + adata["internet"] + ' </p>' +
+                        '<p style="font-size:11px">Number of Desks: ' + adata["desks"] + '</p>' +
+                        '<p style="font-size:11px">Computers: ' + adata["computers"] + '</p>' +
+                        '</div>' +
+                        '</div>';
+                return contentString;
+            }
+        </script>
+        <!-- DivTable.com -->
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh53Rk1CiyMEzeGEmPNbold-BcVLR0H3A&callback=initMap">
+        </script>
+    </body>
+</html>
