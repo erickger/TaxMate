@@ -1,0 +1,6 @@
+framework module Pods_ATOFinder {
+  umbrella header "Pods-ATOFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
