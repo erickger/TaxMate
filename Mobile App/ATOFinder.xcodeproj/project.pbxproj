@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		344D3C05F416CADB56B1389C /* Pods_ATOFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234A334C9992D8D8CE5AEB4B /* Pods_ATOFinder.framework */; };
+		430025C92142AB3D00B184D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430025C82142AB3D00B184D8 /* AppDelegate.swift */; };
+		430025CB2142AB3D00B184D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430025CA2142AB3D00B184D8 /* ViewController.swift */; };
+		430025CE2142AB3D00B184D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430025CC2142AB3D00B184D8 /* Main.storyboard */; };
+		430025D02142AB4000B184D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430025CF2142AB4000B184D8 /* Assets.xcassets */; };
+		430025D32142AB4000B184D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430025D12142AB4000B184D8 /* LaunchScreen.storyboard */; };
+		430025DC2142AD0C00B184D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430025DB2142AD0C00B184D8 /* CoreLocation.framework */; };
+		430025DE2142B35C00B184D8 /* ATOOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430025DD2142B35C00B184D8 /* ATOOffice.swift */; };
+		430025E22142B52300B184D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 430025E12142B52300B184D8 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		234A334C9992D8D8CE5AEB4B /* Pods_ATOFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATOFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41B2B120AB77F31B024F07A9 /* Pods-ATOFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATOFinder.debug.xcconfig"; path = "Target Support Files/Pods-ATOFinder/Pods-ATOFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		430025C52142AB3D00B184D8 /* ATOFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATOFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		430025C82142AB3D00B184D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		430025CA2142AB3D00B184D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		430025CD2142AB3D00B184D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		430025CF2142AB4000B184D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		430025D22142AB4000B184D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		430025D42142AB4000B184D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430025DB2142AD0C00B184D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		430025DD2142B35C00B184D8 /* ATOOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATOOffice.swift; sourceTree = "<group>"; };
+		430025E12142B52300B184D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9884F671A1AE91343531FFE2 /* Pods-ATOFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATOFinder.release.xcconfig"; path = "Target Support Files/Pods-ATOFinder/Pods-ATOFinder.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		430025C22142AB3D00B184D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				430025DC2142AD0C00B184D8 /* CoreLocation.framework in Frameworks */,
+				344D3C05F416CADB56B1389C /* Pods_ATOFinder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		430025BC2142AB3D00B184D8 = {
+			isa = PBXGroup;
+			children = (
+				430025C72142AB3D00B184D8 /* ATOFinder */,
+				430025C62142AB3D00B184D8 /* Products */,
+				430025DA2142AD0C00B184D8 /* Frameworks */,
+				F75F3864F99F2F8FED842F43 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		430025C62142AB3D00B184D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				430025C52142AB3D00B184D8 /* ATOFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		430025C72142AB3D00B184D8 /* ATOFinder */ = {
+			isa = PBXGroup;
+			children = (
+				430025E12142B52300B184D8 /* GoogleService-Info.plist */,
+				430025C82142AB3D00B184D8 /* AppDelegate.swift */,
+				430025CA2142AB3D00B184D8 /* ViewController.swift */,
+				430025CC2142AB3D00B184D8 /* Main.storyboard */,
+				430025CF2142AB4000B184D8 /* Assets.xcassets */,
+				430025D12142AB4000B184D8 /* LaunchScreen.storyboard */,
+				430025D42142AB4000B184D8 /* Info.plist */,
+				430025DD2142B35C00B184D8 /* ATOOffice.swift */,
+			);
+			path = ATOFinder;
+			sourceTree = "<group>";
+		};
+		430025DA2142AD0C00B184D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				430025DB2142AD0C00B184D8 /* CoreLocation.framework */,
+				234A334C9992D8D8CE5AEB4B /* Pods_ATOFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F75F3864F99F2F8FED842F43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41B2B120AB77F31B024F07A9 /* Pods-ATOFinder.debug.xcconfig */,
+				9884F671A1AE91343531FFE2 /* Pods-ATOFinder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		430025C42142AB3D00B184D8 /* ATOFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 430025D72142AB4000B184D8 /* Build configuration list for PBXNativeTarget "ATOFinder" */;
+			buildPhases = (
+				2F42F27EB36D4510A1F59F5A /* [CP] Check Pods Manifest.lock */,
+				430025C12142AB3D00B184D8 /* Sources */,
+				430025C22142AB3D00B184D8 /* Frameworks */,
+				430025C32142AB3D00B184D8 /* Resources */,
+				A6F9264E94CF4AD72BC34D58 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATOFinder;
+			productName = ATOFinder;
+			productReference = 430025C52142AB3D00B184D8 /* ATOFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		430025BD2142AB3D00B184D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = cmuGovhackTeam;
+				TargetAttributes = {
+					430025C42142AB3D00B184D8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 430025C02142AB3D00B184D8 /* Build configuration list for PBXProject "ATOFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 430025BC2142AB3D00B184D8;
+			productRefGroup = 430025C62142AB3D00B184D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				430025C42142AB3D00B184D8 /* ATOFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		430025C32142AB3D00B184D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				430025D32142AB4000B184D8 /* LaunchScreen.storyboard in Resources */,
+				430025E22142B52300B184D8 /* GoogleService-Info.plist in Resources */,
+				430025D02142AB4000B184D8 /* Assets.xcassets in Resources */,
+				430025CE2142AB3D00B184D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F42F27EB36D4510A1F59F5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ATOFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6F9264E94CF4AD72BC34D58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATOFinder/Pods-ATOFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATOFinder/Pods-ATOFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		430025C12142AB3D00B184D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				430025DE2142B35C00B184D8 /* ATOOffice.swift in Sources */,
+				430025CB2142AB3D00B184D8 /* ViewController.swift in Sources */,
+				430025C92142AB3D00B184D8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		430025CC2142AB3D00B184D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				430025CD2142AB3D00B184D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		430025D12142AB4000B184D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				430025D22142AB4000B184D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		430025D52142AB4000B184D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		430025D62142AB4000B184D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		430025D82142AB4000B184D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41B2B120AB77F31B024F07A9 /* Pods-ATOFinder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F29J7N8XCW;
+				INFOPLIST_FILE = ATOFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cmu.hacker.ATOFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		430025D92142AB4000B184D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9884F671A1AE91343531FFE2 /* Pods-ATOFinder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F29J7N8XCW;
+				INFOPLIST_FILE = ATOFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cmu.hacker.ATOFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		430025C02142AB3D00B184D8 /* Build configuration list for PBXProject "ATOFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430025D52142AB4000B184D8 /* Debug */,
+				430025D62142AB4000B184D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		430025D72142AB4000B184D8 /* Build configuration list for PBXNativeTarget "ATOFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430025D82142AB4000B184D8 /* Debug */,
+				430025D92142AB4000B184D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 430025BD2142AB3D00B184D8 /* Project object */;
+}
